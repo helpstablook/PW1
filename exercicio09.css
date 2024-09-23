@@ -3,10 +3,21 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+
+@media (max-width:768px) {
+.header-left, .header-right{
+    display:block;
+    text-align: center;
+    }
+    .search-box{
+        margin-top:10px;
+    }
+}
+
 }
 
 body {
-    background-color: #121212; /* Preto fosco */
+    background-color: #121212;
     color: #FFF;
     display: flex;
     justify-content: center;
@@ -33,7 +44,7 @@ header {
 }
 
 .header-left h1 {
-    color: #FFD700; /* Amarelo (Blockbuster) */
+    color: #FFD700; 
 }
 
 .header-right {
@@ -69,7 +80,7 @@ form {
 
 label {
     font-size: 18px;
-    color: #ADD8E6; /* Azul (Blockbuster) */
+    color: #ADD8E6;
 }
 
 input, select {
@@ -89,15 +100,15 @@ button {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #FFD700; /* Amarelo (Blockbuster) */
-    color: #121212; /* Preto fosco */
+    background-color: #FFD700;
+    color: #121212; 
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #ADD8E6; /* Azul (Blockbuster) */
+    background-color: #ADD8E6; 
 }
 
 table {
@@ -114,7 +125,7 @@ table th, table td {
 }
 
 table th {
-    color: #ADD8E6; /* Azul */
+    color: #ADD8E6; 
     font-weight: bold;
 }
 
