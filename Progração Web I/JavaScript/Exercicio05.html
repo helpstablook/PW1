@@ -1,15 +1,43 @@
-//Exercicio 01
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Verificar Mês</title>
+    <title>Exercícios de Verificação</title>
 </head>
 <body>
-    <h2>Informe o Mês (1-12):</h2>
-    <input type="number" id="mes" min="1" max="12">
-    <button onclick="verificarMes()">Verificar</button>
-    <p id="resultado"></p>
+    <!-- Exercício 01 -->
+    <section>
+        <h2>Informe o Mês (1-12):</h2>
+        <input type="number" id="mes" min="1" max="12">
+        <button onclick="verificarMes()">Verificar</button>
+        <p id="resultadoMes"></p>
+    </section>
+
+    <!-- Exercício 02 -->
+    <section>
+        <h2>Informe um Número Inteiro:</h2>
+        <input type="number" id="numero">
+        <button onclick="verificarNumero()">Verificar</button>
+        <p id="resultadoNumero"></p>
+    </section>
+
+    <!-- Exercício 03 -->
+    <section>
+        <h2>Informe Três Valores:</h2>
+        <input type="number" id="valor1" step="0.01" placeholder="Valor 1">
+        <input type="number" id="valor2" step="0.01" placeholder="Valor 2">
+        <input type="number" id="valor3" step="0.01" placeholder="Valor 3">
+        <button onclick="verificarSoma()">Verificar Soma</button>
+        <p id="resultadoSoma"></p>
+    </section>
+
+    <!-- Exercício 04 -->
+    <section>
+        <h2>Informe uma Letra (F ou M):</h2>
+        <input type="text" id="letra" maxlength="1">
+        <button onclick="verificarGenero()">Verificar</button>
+        <p id="resultadoGenero"></p>
+    </section>
 
     <script>
         function verificarMes() {
@@ -20,59 +48,21 @@
             ];
 
             if (mes >= 1 && mes <= 12) {
-                document.getElementById("resultado").innerText = "Mês: " + meses[mes - 1];
+                document.getElementById("resultadoMes").innerText = "Mês: " + meses[mes - 1];
             } else {
-                document.getElementById("resultado").innerText = "Mês Inválido";
+                document.getElementById("resultadoMes").innerText = "Mês Inválido";
             }
         }
-    </script>
-</body>
-</html>
 
-//Exercicio 02
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Verificação de Número</title>
-</head>
-<body>
-    <h2>Informe um Número Inteiro:</h2>
-    <input type="number" id="numero">
-    <button onclick="verificarNumero()">Verificar</button>
-    <p id="resultado"></p>
-
-    <script>
         function verificarNumero() {
             const numero = parseInt(document.getElementById("numero").value);
             if (numero < 0) {
-                document.getElementById("resultado").innerText = "Erro: número negativo";
+                document.getElementById("resultadoNumero").innerText = "Erro: número negativo";
             } else {
-                document.getElementById("resultado").innerText = "Número positivo ou zero";
+                document.getElementById("resultadoNumero").innerText = "Número positivo ou zero";
             }
         }
-    </script>
-</body>
-</html>
 
-//Exercicio 03
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Soma de Valores</title>
-</head>
-<body>
-    <h2>Informe Três Valores:</h2>
-    <input type="number" id="valor1" step="0.01" placeholder="Valor 1">
-    <input type="number" id="valor2" step="0.01" placeholder="Valor 2">
-    <input type="number" id="valor3" step="0.01" placeholder="Valor 3">
-    <button onclick="verificarSoma()">Verificar Soma</button>
-    <p id="resultado"></p>
-
-    <script>
         function verificarSoma() {
             const valor1 = parseFloat(document.getElementById("valor1").value);
             const valor2 = parseFloat(document.getElementById("valor2").value);
@@ -80,38 +70,20 @@
             const soma = valor1 + valor2 + valor3;
 
             if (soma > 80) {
-                document.getElementById("resultado").innerText = "Soma: " + soma;
+                document.getElementById("resultadoSoma").innerText = "Soma: " + soma;
             } else {
-                document.getElementById("resultado").innerText = "Valor da soma inválido";
+                document.getElementById("resultadoSoma").innerText = "Valor da soma inválido";
             }
         }
-    </script>
-</body>
-</html>
 
-//Exercicio 04
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Verificar Gênero</title>
-</head>
-<body>
-    <h2>Informe uma Letra (F ou M):</h2>
-    <input type="text" id="letra" maxlength="1">
-    <button onclick="verificarGenero()">Verificar</button>
-    <p id="resultado"></p>
-
-    <script>
         function verificarGenero() {
             const letra = document.getElementById("letra").value.toUpperCase();
             if (letra === "F") {
-                document.getElementById("resultado").innerText = "Feminino";
+                document.getElementById("resultadoGenero").innerText = "Feminino";
             } else if (letra === "M") {
-                document.getElementById("resultado").innerText = "Masculino";
+                document.getElementById("resultadoGenero").innerText = "Masculino";
             } else {
-                document.getElementById("resultado").innerText = "Letra inválida";
+                document.getElementById("resultadoGenero").innerText = "Letra inválida";
             }
         }
     </script>
