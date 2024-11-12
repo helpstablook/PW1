@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Exercícios de Verificação</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        section { margin-bottom: 20px; }
+        label, button { display: block; margin: 5px 0; }
+        input { margin-bottom: 10px; }
+    </style>
 </head>
 <body>
     <!-- Exercício 01 -->
@@ -39,53 +45,55 @@
         <p id="resultadoGenero"></p>
     </section>
 
-    <script>
-        function verificarMes() {
-            const mes = parseInt(document.getElementById("mes").value);
-            const meses = [
-                "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-            ];
+<script>
+    function verificarMes() {
+        const mes = parseInt(document.getElementById("mes").value);
+        const meses = [
+        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+        ];
 
-            if (mes >= 1 && mes <= 12) {
-                document.getElementById("resultadoMes").innerText = "Mês: " + meses[mes - 1];
+        if (mes >= 1 && mes <= 12) {
+            document.getElementById("resultadoMes").innerText = "Mês: " + meses[mes - 1];
             } else {
-                document.getElementById("resultadoMes").innerText = "Mês Inválido";
+            document.getElementById("resultadoMes").innerText = "Mês Inválido";
             }
         }
 
-        function verificarNumero() {
-            const numero = parseInt(document.getElementById("numero").value);
-            if (numero < 0) {
-                document.getElementById("resultadoNumero").innerText = "Erro: número negativo";
+    function verificarNumero() {
+        const numero = parseInt(document.getElementById("numero").value);
+        if (numero < 0) {
+            document.getElementById("resultadoNumero").innerText = "Erro: número negativo";
             } else {
-                document.getElementById("resultadoNumero").innerText = "Número positivo ou zero";
+            document.getElementById("resultadoNumero").innerText = "Número positivo ou zero";
             }
         }
 
-        function verificarSoma() {
-            const valor1 = parseFloat(document.getElementById("valor1").value);
-            const valor2 = parseFloat(document.getElementById("valor2").value);
-            const valor3 = parseFloat(document.getElementById("valor3").value);
-            const soma = valor1 + valor2 + valor3;
+    function verificarSoma() {
+        const valor1 = parseFloat(document.getElementById("valor1").value);
+        const valor2 = parseFloat(document.getElementById("valor2").value);
+        const valor3 = parseFloat(document.getElementById("valor3").value);
+        const soma = valor1 + valor2 + valor3;
 
-            if (soma > 80) {
-                document.getElementById("resultadoSoma").innerText = "Soma: " + soma;
+        if (soma > 80) {
+            document.getElementById("resultadoSoma").innerText = "Soma: " + soma;
             } else {
-                document.getElementById("resultadoSoma").innerText = "Valor da soma inválido";
+            document.getElementById("resultadoSoma").innerText = "Valor da soma inválido";
             }
         }
 
-        function verificarGenero() {
-            const letra = document.getElementById("letra").value.toUpperCase();
-            if (letra === "F") {
-                document.getElementById("resultadoGenero").innerText = "Feminino";
+    function verificarGenero() {
+        const letra = document.getElementById("letra").value.toUpperCase();
+
+        if (letra === "F") {
+            document.getElementById("resultadoGenero").innerText = "Feminino";
             } else if (letra === "M") {
-                document.getElementById("resultadoGenero").innerText = "Masculino";
+            document.getElementById("resultadoGenero").innerText = "Masculino";
             } else {
-                document.getElementById("resultadoGenero").innerText = "Letra inválida";
+            document.getElementById("resultadoGenero").innerText = "Letra inválida";
             }
         }
-    </script>
+</script>
+
 </body>
 </html>
