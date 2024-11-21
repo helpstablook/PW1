@@ -120,7 +120,7 @@ footer {
     color: var(--tertiary-color);
     font-size: 1rem;
 }
-/* Responsividade para tablet */
+/* Responsividade */
 @media(max-width:800px){
     .container{
         grid-template-columns: 1fr;
@@ -147,7 +147,7 @@ footer {
         display: none;
     }
 }
-/* Responsividade para celular */
+
 @media(max-width:400px){
     .descripition_title{
         font-size: 7vw;
